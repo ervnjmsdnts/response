@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Poppins:wght@200&display=swap");
+
+html,
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* REGISTRATION FORM CSS */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.radio__input {
+  display: none;
+  overflow: hidden;
+}
+.radio__label {
+  padding: 8px;
+  width: 170px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border: 1px solid black;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.radio__label:not(:last-of-type) {
+  border: 1px solid rgb(67, 67, 67);
+  overflow: hidden;
+}
+
+.radio__input:checked + .radio__label {
+  background-color: #111928;
+  color: white;
+  overflow: hidden;
+}
+
+/* END REGISTRATION FORM CSS */
+
+/* NAVIGATION BAR CSS */
+
+.header .header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding-top: 7px;
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.header-row .header-logo {
+  flex: 10%;
+  height: 60px;
+  width: 50px;
+  display: grid;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.header-row .header-label {
+  display: grid;
+  font-size: 12px;
+  margin-top: 13px;
+  color: white;
+}
+
+.nav-list {
+  width: 100%;
+  padding: 0;
+}
+
+.nav-list .row {
+  width: 100%;
+  height: 50px;
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  color: rgb(145, 148, 154);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.row #icon {
+  display: grid;
+  flex: 30%;
+  place-items: center;
+}
+.row #title {
+  flex: 70%;
+}
+
+.nav-list #active {
+  color: rgb(183, 184, 226);
+}
+
+.nav-logout {
+  margin-top: 62vh;
+}
+
+.nav-logout .logout {
+  display: flex;
+}
+
+.logout .logout-row {
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+  color: white;
+}
+
+.logout-row .logout-logo {
+  background-color: white;
+}
+
+.main-container {
+  width: 100vw;
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  background-color: #1c2839;
+}
+
+/* NAVIGATION BAR CSS END */
+
+/* MAIN PAGE CSS */
+
+.create-subject {
+  display: flex;
+  color: white;
+}
+.create-subject .create-subject-label {
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+.main-page {
+  color: white;
+}
+
+/* ACCOUNTS CSS */
+
+.account_input {
+  border: none;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-bottom-style: hidden;
+  height: 30px;
+  text-indent: 2px;
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+}
