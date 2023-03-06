@@ -47,7 +47,7 @@ const DashBoardPage: React.FunctionComponent<DashBoardPageProps> = () => {
   const [value] = React.useState<Dayjs>(dayjs(new Date()));
 
   const isMorning = (hour: number, minute: number) =>
-    hour > 12 && minute >= 59 ? true : false;
+    hour < 12 && minute <= 59 ? true : false;
 
   useEffect(() => {
     if (currentUser !== null) {
@@ -289,7 +289,7 @@ const DashBoardPage: React.FunctionComponent<DashBoardPageProps> = () => {
               fontStyle: "bold",
             }}
           >
-            {countNotInSchool(studentCounter, countInSchool(currAttendance))}
+            {countNotInSchool(currAttendance)}
           </Typography>
           <Typography
             sx={{

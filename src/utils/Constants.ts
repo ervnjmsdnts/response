@@ -27,25 +27,17 @@ export const getTimestamp = (): number => {
 };
 
 export const countInSchool = (array: Attendance[]): number => {
-  let arr: Attendance[] = [];
-  array.map((data) => {
-    if (count(array, data.studentID) % 2 === 1) {
-      const exist = arr.some((obj) => {
-        return obj.studentID === data.studentID;
-      });
-      if (!exist) {
-        arr.push(data);
-      }
-    }
-  });
-  return arr.length;
+  const notInSchool = array.filter((arr) => !arr.inSchool);
+
+  const inSchool = array.filter(
+    (arr) => !notInSchool.some((att) => att.studentID === arr.studentID)
+  );
+
+  return inSchool.length;
 };
 
-export const countNotInSchool = (
-  studentsCount: number,
-  inSchoolCount: number
-): number => {
-  return studentsCount - inSchoolCount;
+export const countNotInSchool = (array: Attendance[]): number => {
+  return array.filter((arr) => !arr.inSchool).length;
 };
 
 export const count = (array: Attendance[], studentID: string): number => {
